@@ -30,7 +30,8 @@ class Bankaccount:
             print(f"${amount} withdrawn succeffully!")
         except ValueError as e:
             print(f"Error: {e}")
-            
-
+    
+    def balance_inquiry(self):
+        return f"your current balance is: ${self.__balance}"
 
     
