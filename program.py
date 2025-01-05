@@ -34,4 +34,7 @@ class Bankaccount:
     def balance_inquiry(self):
         return f"your current balance is: ${self.__balance}"
 
-    
+    def transaction_history(self):
+        if not self.transactios:
+            return "No transaction found."
+        return "\n".join(self.transactios)
