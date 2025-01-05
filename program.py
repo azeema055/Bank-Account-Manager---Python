@@ -42,5 +42,22 @@ class Bankaccount:
     # Operator overloading for string representation
     def __str__(self):
         return (f"Account Number: {self.__acc_number}\n"
-                f"Cuctomer Nmae: {self.__name}\n"
+                f"Cuctomer Name: {self.__name}\n"
                 f"Balance: ${self.__balance}")
+
+#Testing the Code
+account = Bankaccount("Azeem Akhtar", 1927247832, 75000)
+
+print(account)
+
+account.deposit(200)
+
+account.withdraw(100)
+
+print(account.balance_inquiry())
+
+print("Transaction History:")
+print(account.transaction_history())
+
+
+account.withdraw(80000)
