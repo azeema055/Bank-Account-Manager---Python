@@ -38,3 +38,9 @@ class Bankaccount:
         if not self.transactios:
             return "No transaction found."
         return "\n".join(self.transactios)
+    
+    # Operator overloading for string representation
+    def __str__(self):
+        return (f"Account Number: {self.__acc_number}\n"
+                f"Cuctomer Nmae: {self.__name}\n"
+                f"Balance: ${self.__balance}")
