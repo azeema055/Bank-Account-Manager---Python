@@ -18,8 +18,19 @@ class Bankaccount:
             print(f"${amount} deposited successfully!")
         except ValueError as e:
             print(f"Error: {e}")
-
-
+    
+    def withdraw(self, amount):
+        try:
+            if amount > self.__balance:
+                raise ValueError("Insufficient balance.")
+            if amount <=0:
+                raise ValueError("Withdraw amount must be positive.")
+            self.__balance -= amount
+            self.transactios.append(f"Withdraw: ${amount}")
+            print(f"${amount} withdrawn succeffully!")
+        except ValueError as e:
+            print(f"Error: {e}")
+            
 
 
     
